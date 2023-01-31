@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ExpenseForm.css"
 
 const ExpenseForm = () => {
-const changeHandler = () => {
+    const [enteredTitle, setEnteredTitle] = useState("");
+   const [enteredDate, setEnteredDate] = useState("");
+   const [enteredAmount, setEnteredAmount] = useState("");
+const titleChangeHandler = (e) => {
+   setEnteredTitle(e.target.value)
+      console.log(e.target.value)
 
-    console.log("input form clicked")
 
 };
+const dateChangeHandler = (e) => {
+   setEnteredDate(e.target.value)
+   console.log(e.target.value)
+
+};const amountChangeHandler = (e) => {
+   setEnteredAmount(e.target.value)
+console.log(e.target.value)
+};
+
+
     return (
-        <form className="frm" onChange={changeHandler}>
-            <label className="label">Expense Title</label>
-            <input type="text" className="input"></input>
-            <label className="label">Expense Amount</label>
-            <input type="number" className="input"></input>
-            <label className="label">Expense Date</label>
-            <input type="date" className="input"></input>
-            <button type="submit" className="btn">Submit</button>
+        <form className="frm" >
+            <div className="new-expense__controls">
+                <div div className="new-expense__control"> 
+                    <label>Expense Title</label>
+            <input type="text" className="input" onChange={titleChangeHandler}></input> </div>
+            <div className="new-expense__control">
+                <label >Expense Amount</label>
+            <input onChange={amountChangeHandler} type="number" className="input"></input></div>
+           <div className="new-expense__control">
+             <label>Expense Date</label>
+            <input type="date" className="input" onChange={dateChangeHandler}></input> </div>
+                        </div>
+
+           <div className="new-expense__actions"><button type="submit" >Submit</button></div> 
+           
         </form>
     );
 };
