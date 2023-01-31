@@ -1,0 +1,25 @@
+.label
+{
+    width: 1000px;
+    height: 1000px;
+    color: white;
+    margin-right: 50px;
+    
+}
+
+.frm
+{
+margin: 50px;
+font-size: large;
+}
+.btn
+{
+    width: 100px;
+        color: black;
+        font-size: 20px;
+}
+
+.input
+{
+    margin-right:30px;
+}
