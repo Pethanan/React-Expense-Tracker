@@ -13,11 +13,14 @@ const ExpenseItem = (props) => {
     }
 
     return (
-        <div className="expense-item">
-            <ExpenseDate date={props.date} />
-            <ExpenseDetails title={title} amount={props.amount} location={props.location} />
-            <button onClick={clickHandler}>Edit</button>
-        </div>
+        <li>
+            <div className="expense-item">
+                <ExpenseDate date={props.date} />
+                <ExpenseDetails title={title} amount={props.amount} location={props.location} />
+                <button onClick={clickHandler}>Edit</button>
+            </div>
+        </li>
+
     );
 }
 
